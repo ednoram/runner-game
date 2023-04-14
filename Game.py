@@ -32,6 +32,10 @@ class Game:
         self.obstacle_timer = pygame.USEREVENT + 1
         pygame.time.set_timer(self.obstacle_timer, 900)
 
+    def start(self):
+        while True:
+            self.update()
+
     def restart(self):
         if self.game_over:
             self.obstacle_group.empty()
